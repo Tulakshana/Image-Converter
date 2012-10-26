@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5C898A3146918DE006341EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C898A2146918DE006341EA /* Cocoa.framework */; };
+		F5C898AD146918DF006341EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5C898AB146918DF006341EA /* InfoPlist.strings */; };
+		F5C898AF146918DF006341EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C898AE146918DF006341EA /* main.m */; };
+		F5C898B3146918DF006341EA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F5C898B1146918DF006341EA /* Credits.rtf */; };
+		F5C898B6146918DF006341EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C898B5146918DF006341EA /* AppDelegate.m */; };
+		F5C898B9146918DF006341EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C898B7146918DF006341EA /* MainMenu.xib */; };
+		F5C898C214691CE9006341EA /* AddImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C898C114691CE9006341EA /* AddImagesView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5C8989E146918DE006341EA /* ImageConvertor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageConvertor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C898A2146918DE006341EA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F5C898A5146918DE006341EA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F5C898A6146918DE006341EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F5C898A7146918DE006341EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F5C898AA146918DE006341EA /* ImageConvertor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageConvertor-Info.plist"; sourceTree = "<group>"; };
+		F5C898AC146918DF006341EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5C898AE146918DF006341EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5C898B0146918DF006341EA /* ImageConvertor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageConvertor-Prefix.pch"; sourceTree = "<group>"; };
+		F5C898B2146918DF006341EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F5C898B4146918DF006341EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5C898B5146918DF006341EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5C898B8146918DF006341EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F5C898C014691CE9006341EA /* AddImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddImagesView.h; path = Classes/AddImagesView.h; sourceTree = "<group>"; };
+		F5C898C114691CE9006341EA /* AddImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddImagesView.m; path = Classes/AddImagesView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5C8989B146918DE006341EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C898A3146918DE006341EA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5C89893146918DE006341EA = {
+			isa = PBXGroup;
+			children = (
+				F5C898BF14691CD4006341EA /* Classes */,
+				F5C898A8146918DE006341EA /* ImageConvertor */,
+				F5C898A1146918DE006341EA /* Frameworks */,
+				F5C8989F146918DE006341EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5C8989F146918DE006341EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5C8989E146918DE006341EA /* ImageConvertor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5C898A1146918DE006341EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5C898A2146918DE006341EA /* Cocoa.framework */,
+				F5C898A4146918DE006341EA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5C898A4146918DE006341EA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5C898A5146918DE006341EA /* AppKit.framework */,
+				F5C898A6146918DE006341EA /* CoreData.framework */,
+				F5C898A7146918DE006341EA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F5C898A8146918DE006341EA /* ImageConvertor */ = {
+			isa = PBXGroup;
+			children = (
+				F5C898B4146918DF006341EA /* AppDelegate.h */,
+				F5C898B5146918DF006341EA /* AppDelegate.m */,
+				F5C898B7146918DF006341EA /* MainMenu.xib */,
+				F5C898A9146918DE006341EA /* Supporting Files */,
+			);
+			path = ImageConvertor;
+			sourceTree = "<group>";
+		};
+		F5C898A9146918DE006341EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5C898AA146918DE006341EA /* ImageConvertor-Info.plist */,
+				F5C898AB146918DF006341EA /* InfoPlist.strings */,
+				F5C898AE146918DF006341EA /* main.m */,
+				F5C898B0146918DF006341EA /* ImageConvertor-Prefix.pch */,
+				F5C898B1146918DF006341EA /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5C898BF14691CD4006341EA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F5C898C014691CE9006341EA /* AddImagesView.h */,
+				F5C898C114691CE9006341EA /* AddImagesView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5C8989D146918DE006341EA /* ImageConvertor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C898BC146918DF006341EA /* Build configuration list for PBXNativeTarget "ImageConvertor" */;
+			buildPhases = (
+				F5C8989A146918DE006341EA /* Sources */,
+				F5C8989B146918DE006341EA /* Frameworks */,
+				F5C8989C146918DE006341EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageConvertor;
+			productName = ImageConvertor;
+			productReference = F5C8989E146918DE006341EA /* ImageConvertor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5C89895146918DE006341EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = F5C89898146918DE006341EA /* Build configuration list for PBXProject "ImageConvertor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5C89893146918DE006341EA;
+			productRefGroup = F5C8989F146918DE006341EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5C8989D146918DE006341EA /* ImageConvertor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5C8989C146918DE006341EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C898AD146918DF006341EA /* InfoPlist.strings in Resources */,
+				F5C898B3146918DF006341EA /* Credits.rtf in Resources */,
+				F5C898B9146918DF006341EA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5C8989A146918DE006341EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C898AF146918DF006341EA /* main.m in Sources */,
+				F5C898B6146918DF006341EA /* AppDelegate.m in Sources */,
+				F5C898C214691CE9006341EA /* AddImagesView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5C898AB146918DF006341EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C898AC146918DF006341EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F5C898B1146918DF006341EA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C898B2146918DF006341EA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F5C898B7146918DF006341EA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C898B8146918DF006341EA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5C898BA146918DF006341EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F5C898BB146918DF006341EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F5C898BD146918DF006341EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageConvertor/ImageConvertor-Prefix.pch";
+				INFOPLIST_FILE = "ImageConvertor/ImageConvertor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F5C898BE146918DF006341EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageConvertor/ImageConvertor-Prefix.pch";
+				INFOPLIST_FILE = "ImageConvertor/ImageConvertor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5C89898146918DE006341EA /* Build configuration list for PBXProject "ImageConvertor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C898BA146918DF006341EA /* Debug */,
+				F5C898BB146918DF006341EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C898BC146918DF006341EA /* Build configuration list for PBXNativeTarget "ImageConvertor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C898BD146918DF006341EA /* Debug */,
+				F5C898BE146918DF006341EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5C89895146918DE006341EA /* Project object */;
+}
