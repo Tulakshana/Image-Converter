@@ -90,7 +90,7 @@
         [fileManager createDirectoryAtPath:url withIntermediateDirectories:TRUE attributes:nil error:nil];
 	}
     
-    BOOL copied;
+    BOOL copied = FALSE;
     
     
     
@@ -117,11 +117,15 @@
         }
     }
     NSString *messageString = nil;
-    if (copied) {
-        messageString = [NSString stringWithFormat:@"Image(s) were saved to the directory %@",documentsDirectory];
+    if ([_files count] >0) {
+        if (copied) {
+            messageString = [NSString stringWithFormat:@"Image(s) were saved to the directory %@",documentsDirectory];
+        }else{
+            messageString = [NSString stringWithFormat:@"Image converter requires read/write access to the directory %@",documentsDirectory];
+            
+        }
     }else{
-        messageString = [NSString stringWithFormat:@"Image converter requires read/write access to the directory %@",documentsDirectory];
-
+        messageString = @"Drag and drop image files to the drop area";
     }
     AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
     
@@ -159,7 +163,7 @@
         [fileManager createDirectoryAtPath:url withIntermediateDirectories:TRUE attributes:nil error:nil];
 	}
     
-    BOOL copied;
+    BOOL copied = FALSE;
     
     
     
@@ -187,11 +191,15 @@
         }
     }
     NSString *messageString = nil;
-    if (copied) {
-        messageString = [NSString stringWithFormat:@"Image(s) were saved to the directory %@",documentsDirectory];
+    if ([_files count] >0) {
+        if (copied) {
+            messageString = [NSString stringWithFormat:@"Image(s) were saved to the directory %@",documentsDirectory];
+        }else{
+            messageString = [NSString stringWithFormat:@"Image converter requires read/write access to the directory %@",documentsDirectory];
+            
+        }
     }else{
-        messageString = [NSString stringWithFormat:@"Image converter requires read/write access to the directory %@",documentsDirectory];
-        
+        messageString = @"Drag and drop image files to the drop area";
     }
     AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
     
@@ -229,7 +237,7 @@
         [fileManager createDirectoryAtPath:url withIntermediateDirectories:TRUE attributes:nil error:nil];
 	}
     
-    BOOL copied;
+    BOOL copied = FALSE;
     
     
     
@@ -256,12 +264,17 @@
         }
     }
     NSString *messageString = nil;
-    if (copied) {
-        messageString = [NSString stringWithFormat:@"Image(s) were saved to the directory %@",documentsDirectory];
+    if ([_files count] >0) {
+        if (copied) {
+            messageString = [NSString stringWithFormat:@"Image(s) were saved to the directory %@",documentsDirectory];
+        }else{
+            messageString = [NSString stringWithFormat:@"Image converter requires read/write access to the directory %@",documentsDirectory];
+            
+        }
     }else{
-        messageString = [NSString stringWithFormat:@"Image converter requires read/write access to the directory %@",documentsDirectory];
-        
+        messageString = @"Drag and drop image files to the drop area";
     }
+
     AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
     
     NSAlert *alertForNotSelectIcon = [[NSAlert alloc] init];
