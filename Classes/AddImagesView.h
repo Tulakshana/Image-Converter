@@ -12,7 +12,7 @@
 @interface AddImagesView : NSView{
     NSString *type;
     NSMutableArray *_files;
-    IBOutlet NSTextField *dropAreaText,*txtWidth,*txtHeight,*txtAppend;
+    IBOutlet NSTextField *dropAreaText,*txtWidth,*txtHeight,*txtAppend,*txtRemove;
 }
 
 @property (nonatomic,retain) NSMutableArray *files;
@@ -22,5 +22,6 @@
 - (IBAction)convert:(id)sender;
 - (IBAction)resize:(id)sender;
 - (IBAction)append:(id)sender;
+- (IBAction)remove:(id)sender;
 
 @end
