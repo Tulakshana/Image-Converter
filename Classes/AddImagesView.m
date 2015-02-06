@@ -10,6 +10,8 @@
 
 #import "AppDelegate.h"
 
+#define DOCUMENTS_DIR [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
 @implementation AddImagesView
 
 @synthesize files = _files;
@@ -25,6 +27,7 @@
     return self;
 }
 
+
 - (void)dealloc{
     type = nil;
     _files = nil;
@@ -34,21 +37,21 @@
 
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
-    NSPasteboard *pboard = [sender draggingPasteboard];
-	sender = nil;
-    if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
-        NSMutableArray *files1 = [pboard propertyListForType:NSFilenamesPboardType];
-        pboard = nil;
-        //		NSLog(@"file dropped; path = %@",[[files objectAtIndex:0] pathExtension]);
-        for (int i = 0; i < [files1 count]; i++) {
-            NSString *pathExtension = [[[files1 objectAtIndex:i] pathExtension]lowercaseString];
-            if (![pathExtension isEqualToString:@"png"] && ![pathExtension isEqualToString:@"jpg"] && ![pathExtension isEqualToString:@"tiff"] && ![pathExtension isEqualToString:@"jpeg"]) {
-                return NSDragOperationNone;
-            }
-        }
-        
-		files1 = nil;
-    }
+//    NSPasteboard *pboard = [sender draggingPasteboard];
+//	sender = nil;
+//    if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
+//        NSMutableArray *files1 = [pboard propertyListForType:NSFilenamesPboardType];
+//        pboard = nil;
+//        //		NSLog(@"file dropped; path = %@",[[files objectAtIndex:0] pathExtension]);
+//        for (int i = 0; i < [files1 count]; i++) {
+//            NSString *pathExtension = [[[files1 objectAtIndex:i] pathExtension]lowercaseString];
+//            if (![pathExtension isEqualToString:@"png"] && ![pathExtension isEqualToString:@"jpg"] && ![pathExtension isEqualToString:@"tiff"] && ![pathExtension isEqualToString:@"jpeg"]) {
+//                return NSDragOperationNone;
+//            }
+//        }
+//        
+//		files1 = nil;
+//    }
     
 	return NSDragOperationCopy;
 }
@@ -81,8 +84,8 @@
     [progressView startAnimation:self];
     [self addSubview:progressView];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+	NSString *documentsDirectory = DOCUMENTS_DIR;
     NSString *url = [NSString stringWithFormat:@"%@/ImageConvertor/",documentsDirectory];
 //    NSLog(@"number of files %d",[_files count]);
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -125,7 +128,7 @@
             
         }
     }else{
-        messageString = @"Drag and drop image files to the drop area";
+        messageString = @"Drag and drop files to the drop area";
     }
     AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
     
@@ -138,7 +141,7 @@
     [alertForNotSelectIcon beginSheetModalForWindow:[appDelegate window] modalDelegate:self didEndSelector:nil contextInfo:nil];
     [alertForNotSelectIcon release];
 
-    [dropAreaText setStringValue:@"Drop image(s) (PNG/JPG/TIFF) here"];
+    [dropAreaText setStringValue:@"Drop file(s) here"];
     
     [_files removeAllObjects];
 
@@ -154,8 +157,7 @@
     [progressView startAnimation:self];
     [self addSubview:progressView];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *documentsDirectory = DOCUMENTS_DIR;
     NSString *url = [NSString stringWithFormat:@"%@/ImageConvertor/",documentsDirectory];
     //    NSLog(@"number of files %d",[_files count]);
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -199,7 +201,7 @@
             
         }
     }else{
-        messageString = @"Drag and drop image files to the drop area";
+        messageString = @"Drag and drop files to the drop area";
     }
     AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
     
@@ -212,7 +214,7 @@
     [alertForNotSelectIcon beginSheetModalForWindow:[appDelegate window] modalDelegate:self didEndSelector:nil contextInfo:nil];
     [alertForNotSelectIcon release];
     
-    [dropAreaText setStringValue:@"Drop image(s) (PNG/JPG/TIFF) here"];
+    [dropAreaText setStringValue:@"Drop file(s) here"];
     
     [_files removeAllObjects];
     
@@ -229,8 +231,8 @@
     [progressView startAnimation:self];
     [self addSubview:progressView];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+	NSString *documentsDirectory = DOCUMENTS_DIR;
     NSString *url = [NSString stringWithFormat:@"%@/ImageConvertor/",documentsDirectory];
     //    NSLog(@"number of files %d",[_files count]);
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -275,7 +277,7 @@
             
         }
     }else{
-        messageString = @"Drag and drop image files to the drop area";
+        messageString = @"Drag and drop files to the drop area";
     }
     AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
     
@@ -288,7 +290,7 @@
     [alertForNotSelectIcon beginSheetModalForWindow:[appDelegate window] modalDelegate:self didEndSelector:nil contextInfo:nil];
     [alertForNotSelectIcon release];
     
-    [dropAreaText setStringValue:@"Drop image(s) (PNG/JPG/TIFF) here"];
+    [dropAreaText setStringValue:@"Drop file(s) here"];
     
     [_files removeAllObjects];
     
@@ -303,8 +305,8 @@
     [progressView startAnimation:self];
     [self addSubview:progressView];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+	NSString *documentsDirectory = DOCUMENTS_DIR;
     NSString *url = [NSString stringWithFormat:@"%@/ImageConvertor/",documentsDirectory];
     //    NSLog(@"number of files %d",[_files count]);
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -347,7 +349,7 @@
             
         }
     }else{
-        messageString = @"Drag and drop image files to the drop area";
+        messageString = @"Drag and drop files to the drop area";
     }
 
     AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
@@ -361,7 +363,7 @@
     [alertForNotSelectIcon beginSheetModalForWindow:[appDelegate window] modalDelegate:self didEndSelector:nil contextInfo:nil];
     [alertForNotSelectIcon release];
     
-    [dropAreaText setStringValue:@"Drop image(s) (PNG/JPG/TIFF) here"];
+    [dropAreaText setStringValue:@"Drop file(s) here"];
     
     [_files removeAllObjects];
     
@@ -386,5 +388,122 @@
 
 }
 
+- (IBAction)changeExtension:(id)sender{
+    NSProgressIndicator *progressView = [[NSProgressIndicator alloc]initWithFrame:NSMakeRect(98, 80, 20, 20)];
+    [progressView setStyle:NSProgressIndicatorSpinningStyle];
+    [progressView startAnimation:self];
+    [self addSubview:progressView];
+    
+    
+    NSString *documentsDirectory = DOCUMENTS_DIR;
+    NSString *url = [NSString stringWithFormat:@"%@/ImageConvertor/",documentsDirectory];
+    //    NSLog(@"number of files %d",[_files count]);
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:url]) {
+        [fileManager createDirectoryAtPath:url withIntermediateDirectories:TRUE attributes:nil error:nil];
+    }
+    
+    
+    NSString *messageString = [NSString stringWithFormat:@"Image(s) were saved to the directory %@",url];
+    
+    for (int i = 0; i < [_files count]; i++) {
+        NSString *filePath = [_files objectAtIndex:i];
+        if (filePath != nil) {
+            
+            NSArray *pathComponantsArray = [filePath pathComponents];
+            NSString *newPath = [NSString stringWithFormat:@"%@/%@.%@",url,[[pathComponantsArray lastObject] stringByDeletingPathExtension],txtChangeExt.stringValue];
+
+            
+            NSError *error;
+            [fileManager copyItemAtPath:filePath toPath:newPath error:&error];
+//            if (error.localizedDescription) {
+//                messageString = error.localizedDescription;
+//                break;
+//            }
+        }
+    }
+    
+    if ([_files count] >0) {
+
+    }else{
+        messageString = @"Drag and drop files to the drop area";
+    }
+    AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
+    
+    NSAlert *alertForNotSelectIcon = [[NSAlert alloc] init];
+    [alertForNotSelectIcon addButtonWithTitle:@"OK"];
+    [alertForNotSelectIcon addButtonWithTitle:@"Cancel"];
+    [alertForNotSelectIcon setMessageText:@"Image Convertor"];
+    [alertForNotSelectIcon setInformativeText:messageString];
+    [alertForNotSelectIcon setAlertStyle:NSWarningAlertStyle];
+    [alertForNotSelectIcon beginSheetModalForWindow:[appDelegate window] modalDelegate:self didEndSelector:nil contextInfo:nil];
+    [alertForNotSelectIcon release];
+    
+    [dropAreaText setStringValue:@"Drop file(s) here"];
+    
+    [_files removeAllObjects];
+    
+    [progressView removeFromSuperview];
+    [progressView stopAnimation:self];
+    [progressView release];
+}
+
+- (IBAction)removeExtension:(id)sender{
+
+    NSProgressIndicator *progressView = [[NSProgressIndicator alloc]initWithFrame:NSMakeRect(98, 80, 20, 20)];
+    [progressView setStyle:NSProgressIndicatorSpinningStyle];
+    [progressView startAnimation:self];
+    [self addSubview:progressView];
+    
+    
+    NSString *documentsDirectory = DOCUMENTS_DIR;
+    NSString *url = [NSString stringWithFormat:@"%@/ImageConvertor/",documentsDirectory];
+    //    NSLog(@"number of files %d",[_files count]);
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:url]) {
+        [fileManager createDirectoryAtPath:url withIntermediateDirectories:TRUE attributes:nil error:nil];
+    }
+    
+    
+    NSString *messageString = [NSString stringWithFormat:@"Image(s) were saved to the directory %@",url];
+    
+    for (int i = 0; i < [_files count]; i++) {
+        NSString *filePath = [_files objectAtIndex:i];
+        if (filePath != nil) {
+            
+            NSArray *pathComponantsArray = [filePath pathComponents];
+            NSString *newPath = [NSString stringWithFormat:@"%@/%@",url,[[pathComponantsArray lastObject] stringByDeletingPathExtension]];
+            
+            
+            NSError *error;
+            [fileManager copyItemAtPath:filePath toPath:newPath error:&error];
+
+        }
+    }
+    
+    if ([_files count] >0) {
+        
+    }else{
+        messageString = @"Drag and drop files to the drop area";
+    }
+    AppDelegate *appDelegate=(AppDelegate *)[[NSApplication sharedApplication]delegate];
+    
+    NSAlert *alertForNotSelectIcon = [[NSAlert alloc] init];
+    [alertForNotSelectIcon addButtonWithTitle:@"OK"];
+    [alertForNotSelectIcon addButtonWithTitle:@"Cancel"];
+    [alertForNotSelectIcon setMessageText:@"Image Convertor"];
+    [alertForNotSelectIcon setInformativeText:messageString];
+    [alertForNotSelectIcon setAlertStyle:NSWarningAlertStyle];
+    [alertForNotSelectIcon beginSheetModalForWindow:[appDelegate window] modalDelegate:self didEndSelector:nil contextInfo:nil];
+    [alertForNotSelectIcon release];
+    
+    [dropAreaText setStringValue:@"Drop file(s) here"];
+    
+    [_files removeAllObjects];
+    
+    [progressView removeFromSuperview];
+    [progressView stopAnimation:self];
+    [progressView release];
+}
 
 @end
